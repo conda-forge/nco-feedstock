@@ -73,6 +73,11 @@ Linux: [![Circle CI](https://circleci.com/gh/conda-forge/nco-feedstock.svg?style
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/nco-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/nco-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/nco-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/nco-feedstock/branch/master)
 
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/nco/badges/version.svg)](https://anaconda.org/conda-forge/nco)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/nco/badges/downloads.svg)](https://anaconda.org/conda-forge/nco)
+
 
 Updating nco-feedstock
 ======================
