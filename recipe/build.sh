@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [[ $(uname) == 'Darwin' ]]; then
+  export LIBRARY_SEARCH_VAR=DYLD_FALLBACK_LIBRARY_PATH
+elif [[ $(uname) == 'Linux' ]]; then
+  export LIBRARY_SEARCH_VAR=LD_LIBRARY_PATH
+fi
+
 export HAVE_ANTLR=yes
 export HAVE_NETCDF4_H=yes
 export NETCDF_ROOT=$PREFIX
@@ -13,10 +19,7 @@ fi
 
 ./configure --prefix=$PREFIX --enable-esmf $ARGS
 
+
 make
-
-if [[ $(uname) != Darwin ]]; then
-make check
-fi
-
+eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check
 make install
