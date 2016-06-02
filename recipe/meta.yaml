@@ -9,7 +9,7 @@ source:
     sha256: 2ebeec6456255d363e9f5ef92d45cd809c058495d2c3920de3eacda5098986a9
 
 build:
-    number: 0
+    number: 1
     skip: True  # [win]
 
 requirements:
@@ -17,17 +17,17 @@ requirements:
         - gsl
         - antlr
         - curl
-        - zlib 1.2*
-        - hdf5 1.8.15*
-        - libnetcdf 4.3*
+        - zlib 1.2.*
+        - hdf5 1.8.17|1.8.17.*
+        - libnetcdf 4.4.*
         - udunits2
         - expat
         - krb5
         - texinfo
     run:
         - gsl
-        - hdf5 1.8.15*
-        - libnetcdf 4.3*
+        - hdf5 1.8.17|1.8.17.*
+        - libnetcdf 4.4.*
         - udunits2
         - expat
         - libgcc
