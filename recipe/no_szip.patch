@@ -1,0 +1,33 @@
+--- nco-4.6.4.orig/CMakeLists.txt	2017-02-07 22:27:44.000000000 -0300
++++ nco-4.6.4/CMakeLists.txt	2017-02-08 13:08:57.470225659 -0300
+@@ -6,7 +6,6 @@
+ #HDF5_LIBRARY
+ #HDF5_HL_LIBRARY
+ #ZLIB_LIBRARY
+-#SZIP_LIBRARY
+ #CURL_LIBRARY
+ 
+ #Logic for finding header files and library dependencies:
+@@ -57,13 +56,6 @@
+   message("-- Found zlib library at: " ${ZLIB_LIBRARY})
+ endif()
+ 
+-find_library(SZIP_LIBRARY NAMES sz)
+-if(NOT SZIP_LIBRARY)
+-  message(FATAL_ERROR "szip library not found")
+-else()
+-  message("-- Found szip library at: " ${SZIP_LIBRARY})
+-endif()
+-
+ find_library(CURL_LIBRARY NAMES curl)
+ if(NOT CURL_LIBRARY)
+   message(FATAL_ERROR "curl library not found")
+@@ -94,7 +86,7 @@
+ include_directories(${NETCDF_INCLUDE_FOUND})
+ 
+ set(LIB_DEP ${LIB_DEP} ${NETCDF_LIBRARY} ${HDF5_HL_LIBRARY} ${HDF5_LIBRARY})
+-set(LIB_DEP ${LIB_DEP} ${CURL_LIBRARY} ${ZLIB_LIBRARY} ${SZIP_LIBRARY})
++set(LIB_DEP ${LIB_DEP} ${CURL_LIBRARY} ${ZLIB_LIBRARY})
+ set(LIB_DEP ${LIB_DEP} ${WINSOCK_LIBRARY} m)
+ 
+ set(SRC ${SRC} src/nco/libnco.h)
