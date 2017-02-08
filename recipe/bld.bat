@@ -12,6 +12,7 @@ cmake -G "NMake Makefiles" ^
       -D HDF5_HL_LIBRARY=%LIBRARY_LIB%\lib\libhdf_hl.lib ^
       -D ZLIB_LIBRARY=%LIBRARY_LIB%\zlib.lib ^
       -D CURL_LIBRARY="%LIBRARY_LIB%\libcurl.lib wsock32.lib wldap32.lib winmm.lib" ^
+      -D SZIP=0 ^
       %SRC_DIR%
 if errorlevel 1 exit 1
 
