@@ -14,8 +14,8 @@ build:
 
 requirements:
   build:
-    - gsl
-    - antlr
+    - gsl  # [not win]
+    - antlr  # [not win]
     - curl
     - zlib 1.2.*
     - hdf5 1.8.17|1.8.17.*
@@ -23,18 +23,18 @@ requirements:
     - udunits2
     - expat
     - krb5
-    - texinfo
-    - bison
-    - flex 2.6.0
-    - m4
+    - texinfo  # [not win]
+    - bison  # [not win]
+    - flex 2.6.0  # [not win]
+    - m4  # [not win]
   run:
-    - gsl
+    - gsl  # [not win]
     - hdf5 1.8.17|1.8.17.*
     - libnetcdf 4.4.*
     - udunits2
     - expat
-    - libgcc
-    - esmf
+    - libgcc  # [not win]
+    - esmf  # [not win]
 
 test:
   source_files:
