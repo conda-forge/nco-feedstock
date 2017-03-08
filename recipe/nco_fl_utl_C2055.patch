@@ -1,0 +1,11 @@
+--- nco-4.6.4.orig/src/nco/nco_fl_utl.c	2017-02-07 23:27:44.000000000 -0200
++++ nco-4.6.4/src/nco/nco_fl_utl.c	2017-03-08 16:08:47.248240854 -0300
+@@ -257,7 +257,7 @@
+ } /* end nco_fl_cp() */
+ 
+ #ifdef _MSC_VER
+-char * nco_fl_info_get(const char *){return NULL;}
++char * nco_fl_info_get(const char *bob){return NULL;}
+ #else /* !_MSC_VER */
+ char * /* O [sng] Canonical file name*/
+ nco_fl_info_get /* [fnc] Determine canonical filename and properties */
