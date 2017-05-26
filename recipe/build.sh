@@ -22,5 +22,5 @@ export NETCDF_ROOT=$PREFIX
 ./configure --prefix=$PREFIX $ARGS
 
 make
-eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check
+#eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check
 make install
