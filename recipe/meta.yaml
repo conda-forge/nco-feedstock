@@ -5,45 +5,55 @@ package:
   version: {{ version }}
 
 source:
-  fn: nco-{{ version }}.tar.gz
   url: https://github.com/nco/nco/archive/{{ version }}.tar.gz
   sha256: efdc0d65d3cc67d0d5dc521709dd0e60b24839e0ae7ded92aaec656890f6f416
 
 build:
-  number: 0
-  skip: True  # [win]
-
+  number: 1
+  skip: True  # [win and py35]
+  features:
+    - vc9  # [win and py27]
+    - vc10  # [win and py34]
+    - vc14  # [win and (py35 or py36)]
 requirements:
   build:
-    - gsl
-    - antlr
+    - python  # [win]
+    - cmake  # [win]
+    - gsl  # [not win]
+    - antlr  # [not win]
     - curl
-    - zlib 1.2.*
+    - zlib 1.2.8
     - hdf5 1.8.18|1.8.18.*
     - libnetcdf 4.4.*
     - udunits2
     - expat
-    - krb5 1.14.*
-    - texinfo
-    - bison
-    - flex
-    - m4
+    - krb5
+    - texinfo  # [not win]
+    - bison  # [not win]
+    - flex 2.6.0  # [not win]
+    - m4  # [not win]
+    - vc 9  # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and (py35 or py36)]
   run:
-    - gsl
+    - gsl  # [not win]
     - hdf5 1.8.18|1.8.18.*
     - libnetcdf 4.4.*
     - udunits2
     - expat
-    - libgcc
-    - esmf
-    - openblas 0.2.19|0.2.19.*
+    - libgcc  # [not win]
+    - esmf  # [not win]
+    - openblas 0.2.19|0.2.19.*  # [not win]
+    - vc 9  # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and (py35 or py36)]
 
 test:
   source_files:
     - data/in.nc
   commands:
     - ncks --help
-    - ncap2 --help
+    - ncap2 --help  # [not win]
     - conda inspect linkages -p $PREFIX nco  # [not win]
     - conda inspect objects -p $PREFIX nco  # [osx]
 
