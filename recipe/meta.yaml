@@ -10,10 +10,8 @@ source:
 
 build:
   number: 1
-  skip: True  # [win and py35]
+  skip: True  # [win and py<=35]
   features:
-    - vc9  # [win and py27]
-    - vc10  # [win and py34]
     - vc14  # [win and (py35 or py36)]
 requirements:
   build:
@@ -32,8 +30,6 @@ requirements:
     - bison  # [not win]
     - flex 2.6.0  # [not win]
     - m4  # [not win]
-    - vc 9  # [win and py27]
-    - vc 10  # [win and py34]
     - vc 14  # [win and (py35 or py36)]
   run:
     - gsl  # [not win]
@@ -44,8 +40,6 @@ requirements:
     - libgcc  # [not win]
     - esmf  # [not win]
     - openblas 0.2.19|0.2.19.*  # [not win]
-    - vc 9  # [win and py27]
-    - vc 10  # [win and py34]
     - vc 14  # [win and (py35 or py36)]
 
 test:
