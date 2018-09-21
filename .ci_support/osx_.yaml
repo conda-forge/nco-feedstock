@@ -15,9 +15,9 @@ expat:
 gsl:
 - '2.2'
 hdf5:
-- 1.10.2
+- 1.10.3
 krb5:
-- '1.14'
+- '1.16'
 libnetcdf:
 - '4.6'
 macos_machine:

@@ -13,7 +13,7 @@ expat:
 gsl:
 - '2.2'
 hdf5:
-- 1.10.2
+- 1.10.3
 libnetcdf:
 - '4.6'
 openblas:
