@@ -9,7 +9,7 @@ source:
   sha256: 8a618b6dca9bb3d10bef12094c1f23400facd1c7f07583cdefdd5281a3c334ec
 
 build:
-  number: 1
+  number: 200
   skip: True  # [win and vc<14]
 
 requirements:
@@ -26,7 +26,7 @@ requirements:
     - curl
     - expat
     - gsl
-    - hdf5
+    - hdf5 ==1.10.2
     - krb5  # [not win]
     - libnetcdf
     - openblas
@@ -37,7 +37,7 @@ requirements:
     - esmf  # [not win]
     - expat
     - gsl
-    - hdf5
+    - hdf5 ==1.10.2
     - krb5  # [not win]
     - libnetcdf
     - openblas
