@@ -1,5 +1,5 @@
 c_compiler:
-- toolchain_c
+- gcc
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -7,15 +7,15 @@ channel_targets:
 curl:
 - '7.59'
 cxx_compiler:
-- toolchain_cxx
+- gxx
 docker_image:
-- condaforge/linux-anvil
+- condaforge/linux-anvil-comp7
 expat:
 - '2.2'
 gsl:
-- '2.2'
+- '2.4'
 hdf5:
-- 1.10.3
+- 1.10.4
 krb5:
 - '1.16'
 libnetcdf:
@@ -29,8 +29,6 @@ pin_run_as_build:
     max_pin: x.x
   gsl:
     max_pin: x.x
-  hdf5:
-    max_pin: x.x.x
   krb5:
     max_pin: x.x
   libnetcdf:
