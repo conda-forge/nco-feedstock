@@ -25,6 +25,8 @@ ncks -O --rgr grid=grd_2x2.nc \
 
 ncap2 -O -s 'tst[lat,lon]=1.0f' skl_t42.nc dat_t42.nc
 
+export NCO_PATH_OVERRIDE=No
+
 echo "Debug: ncremap 1"
 ncremap -D 3 -a conserve -s grd_t42.nc -g grd_2x2.nc -m map_t42_to_2x2.nc
 echo "Debug: ncremap 2"
