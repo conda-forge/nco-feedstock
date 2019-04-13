@@ -19,17 +19,22 @@ ncks -O --rgr grid=grd_2x2.nc \
         --rgr latlon=90,180 \
         --rgr lat_typ=eqa \
         --rgr lon_typ=Grn_wst \
-        -D 3 \
         $fin \
         foo.nc
 
+
 ncap2 -O -s 'tst[lat,lon]=1.0f' skl_t42.nc dat_t42.nc
 
-# The next test(s) seems to be hanging in CI (Azure and perhaps others) so they
-# are commented out for now
-# ncremap -a conserve -s grd_t42.nc -g grd_2x2.nc -m map_t42_to_2x2.nc
-# ncremap -i dat_t42.nc -m map_t42_to_2x2.nc -o dat_2x2.nc
-# ncremap -a tempest -s grd_t42.nc -g grd_2x2.nc -m map_tempest_t42_to_2x2.nc
-# ncremap -i dat_t42.nc -m map_tempest_t42_to_2x2.nc -o dat_tempest_2x2.nc
-# ncwa -O dat_2x2.nc dat_avg.nc
-# ncks -C -H -v tst dat_avg.nc
+echo "Debug: ncremap 1"
+ncremap -D 3 -a conserve -s grd_t42.nc -g grd_2x2.nc -m map_t42_to_2x2.nc
+echo "Debug: ncremap 2"
+ncremap -D 3 -i dat_t42.nc -m map_t42_to_2x2.nc -o dat_2x2.nc
+echo "Debug: ncremap 3"
+ncremap -D 3 -a tempest -s grd_t42.nc -g grd_2x2.nc -m map_tempest_t42_to_2x2.nc
+echo "Debug: ncremap 4"
+ncremap -D 3 -i dat_t42.nc -m map_tempest_t42_to_2x2.nc -o dat_tempest_2x2.nc
+echo "Debug: ncwa"
+ncwa -D 3 -O dat_2x2.nc dat_avg.nc
+echo "Debug: ncks"
+ncks -D 3 -C -H -v tst dat_avg.nc
+echo "Debug: done!"
