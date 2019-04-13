@@ -47,6 +47,8 @@ requirements:
     - tempest-remap  # [not win]
 
 test:
+  files:
+    - test_ncremap.bash
   source_files:
     - data/in.cdl
   commands:

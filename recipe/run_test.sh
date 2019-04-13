@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Stop on first error
+set -ex
+
 ncgen -o data/in.nc data/in.cdl
 fin=data/in.nc
 
@@ -24,6 +27,9 @@ ncks -O --rgr grid=grd_2x2.nc \
 
 
 ncap2 -O -s 'tst[lat,lon]=1.0f' skl_t42.nc dat_t42.nc
+
+echo "Debug: test_ncremap.bash 1"
+./test_ncremap.bash -D 3 -a conserve -s grd_t42.nc -g grd_2x2.nc -m map_t42_to_2x2.nc
 
 export NCO_PATH_OVERRIDE=No
 
