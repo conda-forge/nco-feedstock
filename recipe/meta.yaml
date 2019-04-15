@@ -1,15 +1,15 @@
-{% set version = "4.7.9" %}
+{% set version = "4.8.0.alpha08" %}
 
 package:
   name: nco
   version: {{ version }}
 
 source:
-  url: https://github.com/nco/nco/archive/{{ version }}.tar.gz
-  sha256: 048f6298bceb40913c3ae433f875dea1e9129b1c86019128e7271d08f274a879
+  git_url: https://github.com/nco/nco.git
+  git_rev: master
 
 build:
-  number: 2
+  number: 0
   skip: True  # [win and vc<14]
 
 requirements:
