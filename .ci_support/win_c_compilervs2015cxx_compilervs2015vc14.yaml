@@ -12,8 +12,6 @@ expat:
 - '2.2'
 gsl:
 - '2.5'
-hdf5:
-- 1.10.5
 libblas:
 - 3.8 *netlib
 libcblas:
