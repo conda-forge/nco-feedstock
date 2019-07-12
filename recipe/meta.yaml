@@ -9,7 +9,7 @@ source:
   sha256: ddae3fed46c266798ed1176d6a70b36376d2d320fa933c716a623172d1e13c68
 
 build:
-  number: 0
+  number: 100
   skip: True  # [win and vc<14]
 
 requirements:
@@ -28,7 +28,7 @@ requirements:
     - curl
     - expat
     - gsl
-    - hdf5
+    - hdf5 1.10.4
     - krb5  # [not win]
     - libnetcdf  # [not win]
     - libnetcdf 4.6.1  # [win]
@@ -39,7 +39,7 @@ requirements:
     - esmf  # [not win]
     - expat
     - gsl
-    - hdf5
+    - hdf5 1.10.4
     - krb5  # [not win]
     - libnetcdf  # [not win]
     - libnetcdf 4.6.1  # [win]
