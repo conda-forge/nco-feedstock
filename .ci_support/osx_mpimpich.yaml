@@ -21,7 +21,7 @@ gsl:
 hdf5:
 - 1.10.5
 krb5:
-- '1.16'
+- 1.17.1
 libblas:
 - 3.8 *netlib
 libcblas:
