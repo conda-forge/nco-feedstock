@@ -54,9 +54,10 @@ requirements:
     - libnetcdf
     - udunits2
     - tempest-remap  # [not win]
-    - moab * *_tempest_*  # [not win]
 
 test:
+  requires:
+    - moab * mpi_mpich_tempest_*  # [not win]
   source_files:
     - data/in.cdl
   commands:
