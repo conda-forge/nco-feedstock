@@ -54,7 +54,7 @@ requirements:
     - libnetcdf
     - udunits2
     - tempest-remap  # [not win]
-    - moab * tempest_*  # [not win]
+    - moab * *_tempest_*  # [not win]
 
 test:
   source_files:
