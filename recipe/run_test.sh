@@ -35,7 +35,7 @@ ncap2 -O -s 'tst[lat,lon]=1.0f' skl_t42.nc dat_t42.nc
 
 ncremap --no_stdin -a conserve -s grd_t42.nc -g grd_2x2.nc -m map_t42_to_2x2.nc
 ncremap --no_stdin -i dat_t42.nc -m map_t42_to_2x2.nc -o dat_2x2.nc
-ncremap --no_stdin -a tempest -s grd_t42.nc -g grd_2x2.nc -m map_tempest_t42_to_2x2.nc
+ncremap --no_stdin -a fv2fv_flx -s grd_t42.nc -g grd_2x2.nc -m map_tempest_t42_to_2x2.nc
 ncremap --no_stdin -i dat_t42.nc -m map_tempest_t42_to_2x2.nc -o dat_tempest_2x2.nc
 ncwa -O dat_2x2.nc dat_avg.nc
 ncks -C -H -v tst dat_avg.nc
