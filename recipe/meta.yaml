@@ -16,6 +16,7 @@ build:
 requirements:
   build:
     - cmake  # [win]
+    - make  # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     # 20210526 csz temporarily disable OpenMP on MacOS
