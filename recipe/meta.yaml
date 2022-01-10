@@ -1,4 +1,4 @@
-{% set version = "5.0.4beta01" %}
+{% set version = "5.0.5beta02" %}
 {% set build = 0 %}
 
 package:
@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/nco/nco/archive/5.0.4-beta01.tar.gz
-  sha256: 813b5e10d4120dc415d8b26619e542348acb770ca2189e8d7b9c3feaacd5ed4a
+  url: https://github.com/nco/nco/archive/5.0.5-beta02.tar.gz
+  sha256: aec681cf99ada2b61bff1ce5158ca64d2422005eda4899264b98aeda85e8c38a
 
 build:
   number: {{ build }}
@@ -19,8 +19,7 @@ requirements:
     - make  # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    # 20210526 csz temporarily disable OpenMP on MacOS
-    #    - llvm-openmp  # [osx]
+    - llvm-openmp  # [osx]
     - libgomp      # [linux]
   host:
     - libblas
@@ -34,8 +33,7 @@ requirements:
     - expat
     - gsl
     - krb5  # [not win]
-    # 20210526 csz temporarily disable OpenMP on MacOS
-    # - llvm-openmp  # [osx]
+    - llvm-openmp  # [osx]
     - libgomp      # [linux]
     - udunits2
     - zlib
