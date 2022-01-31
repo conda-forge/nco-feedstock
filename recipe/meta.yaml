@@ -1,4 +1,4 @@
-{% set version = "5.0.5beta03" %}
+{% set version = "5.0.6alpha02" %}
 {% set build = 0 %}
 
 package:
@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/nco/nco/archive/5.0.5-beta03.tar.gz
-  sha256: 235cd18f085d08c154d3ec0e3c33b6df82fb2a4fd077871e2e178d7e591538dd
+  url: https://github.com/nco/nco/archive/5.0.6-alpha02.tar.gz
+  sha256: 69f2ab6ef6c6bcdd8945d20b555a7f3d4e014f7fb1962e1441924f95e546ec23
 
 build:
   number: {{ build }}
@@ -52,7 +52,7 @@ requirements:
     - krb5  # [not win]
     - libnetcdf
     - udunits2
-    - tempest-remap  # [not win]
+    - tempest-remap <2.1.2  # [not win]
 
 test:
   source_files:
