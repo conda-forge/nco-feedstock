@@ -15,9 +15,9 @@ gsl:
 hdf5:
 - 1.12.1
 libblas:
-- 3.8 *netlib
+- 3.9 *netlib
 libcblas:
-- 3.8 *netlib
+- 3.9 *netlib
 libnetcdf:
 - 4.8.1
 pin_run_as_build:
