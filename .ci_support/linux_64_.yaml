@@ -30,13 +30,6 @@ libcblas:
 - 3.9 *netlib
 libnetcdf:
 - 4.8.1
-pin_run_as_build:
-  curl:
-    max_pin: x
-  krb5:
-    max_pin: x.x
-  zlib:
-    max_pin: x.x
 target_platform:
 - linux-64
 zip_keys:
