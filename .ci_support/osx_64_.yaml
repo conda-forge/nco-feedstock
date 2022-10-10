@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '13'
+- '14'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -13,7 +13,7 @@ curl:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '13'
+- '14'
 expat:
 - '2'
 gsl:
@@ -29,16 +29,9 @@ libcblas:
 libnetcdf:
 - 4.8.1
 llvm_openmp:
-- '13'
+- '14'
 macos_machine:
 - x86_64-apple-darwin13.4.0
-pin_run_as_build:
-  curl:
-    max_pin: x
-  krb5:
-    max_pin: x.x
-  zlib:
-    max_pin: x.x
 target_platform:
 - osx-64
 zip_keys:
