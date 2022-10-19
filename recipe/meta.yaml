@@ -1,4 +1,4 @@
-{% set version = "5.1.1alpha11" %}
+{% set version = "5.1.1alpha12" %}
 {% set build = 0 %}
 
 package:
@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/nco/nco/archive/5.1.1-alpha11.tar.gz
-  sha256: 2356bf69953fbad4902b95b1ea0a389b03ce76c3bd64916aebcfef5fa9868613
+  url: https://github.com/nco/nco/archive/5.1.1-alpha12.tar.gz
+  sha256: eede5ad9a5dfbd26cbcee7b7fd21f09dd938ff8e7ed595b17708e930bf6eacb8
 
 build:
   number: {{ build }}
@@ -52,8 +52,8 @@ requirements:
     - krb5  # [not win]
     - libnetcdf
     - udunits2
-    - tempest-remap <2.1.2  # [not win]
-
+    # tempest-remap 2.1.2 and 2.1.3 dropped a flag used by NCO
+    - tempest-remap !=2.1.2,!=2.1.3  # [not win]
 test:
   source_files:
     - data/in.cdl
