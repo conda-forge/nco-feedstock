@@ -1,4 +1,4 @@
-{% set version = "5.2.4" %}
+{% set version = "5.2.5" %}
 {% set build = 0 %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/nco/nco/archive/{{ version }}.tar.gz
-  sha256: 44efa9151825487fa0562fa5c6d68837624059a8e2da9d15c83ceb4d498f7902
+  sha256: 1053d3bf68c0b528502a545c9291747b9be7cb4938a2e48e08c7585462fc7d64
 
 build:
   number: {{ build }}
@@ -19,6 +19,7 @@ requirements:
     - make  # [unix]
     - gnuconfig  # [unix]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
