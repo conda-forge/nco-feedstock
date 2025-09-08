@@ -1,0 +1,23 @@
+From 732fdf3c52dc37a133519117157734196631faad Mon Sep 17 00:00:00 2001
+From: hmb1 <henryb@hush.com>
+Date: Wed, 12 Apr 2023 10:40:09 +0100
+Subject: [PATCH] clang16 fix as -std=c++17  has removed  std::binary_function<
+ T, T, bool>
+
+---
+ lib/cpp/antlr/CharScanner.hpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/lib/cpp/antlr/CharScanner.hpp b/lib/cpp/antlr/CharScanner.hpp
+index 43d8275..d981641 100644
+--- a/lib/cpp/antlr/CharScanner.hpp
++++ b/lib/cpp/antlr/CharScanner.hpp
+@@ -66,7 +66,7 @@ ANTLR_C_USING(strcasecmp)
+ 
+ /** Functor for the literals map
+  */
+-class ANTLR_API CharScannerLiteralsLess : public ANTLR_USE_NAMESPACE(std)binary_function<ANTLR_USE_NAMESPACE(std)string,ANTLR_USE_NAMESPACE(std)string,bool> {
++class ANTLR_API CharScannerLiteralsLess {
+ private:
+ 	const CharScanner* scanner;
+ public:

@@ -1,16 +1,24 @@
 {% set version = "5.3.4" %}
-{% set build = 1 %}
 
 package:
   name: nco
   version: {{ version }}
 
 source:
-  url: https://github.com/nco/nco/archive/{{ version }}.tar.gz
-  sha256: 265059157ab4e64e73b6aad96da1e09427ba8a03ed3e2348d0a5deb57cf76006
+  - url: http://www.antlr2.org/download/antlr-2.7.7.tar.gz
+    sha256: 853aeb021aef7586bda29e74a6b03006bcb565a755c86b66032d8ec31b67dbb9
+    patches:
+      - patches/0001-char-scanner.patch
+      - patches/0002-fix-stdcxx17-binary-function.patch
+      - patches/0003-update-function-name-from-uncaught_exception.patch
+    folder: antlr2-src
+
+  - url: https://github.com/nco/nco/archive/{{ version }}.tar.gz
+    sha256: 265059157ab4e64e73b6aad96da1e09427ba8a03ed3e2348d0a5deb57cf76006
+    folder: nco-src
 
 build:
-  number: {{ build }}
+  number: 2
   skip: true  # [win and vc<14]
 
 requirements:
@@ -23,7 +31,6 @@ requirements:
     - {{ compiler('cxx') }}
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
-    - antlr >=2.7.7,<3
     - bison  # [not win]
     - texinfo  # [not win]
     - flex  # [not win]
@@ -31,7 +38,6 @@ requirements:
   host:
     - libblas
     - libcblas
-    - antlr >=2.7.7,<3
     - bison  # [not win]
     - texinfo  # [not win]
     - flex  # [not win]
@@ -58,7 +64,7 @@ test:
   requires:
     - wget  # [not win]
   source_files:
-    - data/in.cdl
+    - nco-src/data/in.cdl
   commands:
     - ncks --help
     - ncap2 --help
@@ -68,7 +74,7 @@ about:
   home: http://nco.sourceforge.net/
   license: BSD-3-Clause
   license_family: BSD
-  license_file: COPYING
+  license_file: nco-src/COPYING 
   summary: Suite of programs for manipulating NetCDF/HDF4 files
 
 extra:

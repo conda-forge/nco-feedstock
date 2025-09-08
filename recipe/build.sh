@@ -1,6 +1,35 @@
 #!/bin/bash
-
 set -xe
+
+# Antlr2
+
+cd antlr2-src
+# Get an updated config.sub and config.guess
+cp $BUILD_PREFIX/share/gnuconfig/config.* ./scripts/
+
+if [ $(uname) == Darwin ]; then
+    CSHARP=--disable-csharp
+else
+    CSHARP=--enable-csharp
+fi
+
+./configure --prefix=$PREFIX \
+            --host="${HOST}" \
+            --build="${BUILD}" \
+            --enable-cxx \
+            --disable-python \
+            ${CSHARP} \
+            --disable-java \
+
+make
+# No make check :-(
+make install
+
+cd ..
+
+# NCO
+
+cd nco-src
 
 # Get an updated config.sub and config.guess
 cp $BUILD_PREFIX/share/gnuconfig/config.* ./autobld
@@ -59,3 +88,9 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}
 make check
 fi
 make install
+
+rm -rf ${PREFIX}/bin/{antlr-config,antlr}
+rm -rf ${PREFIX}/{share,include}
+rm -rf ${PREFIX}/lib/*.a
+
+cd ..

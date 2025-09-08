@@ -1,7 +1,7 @@
 #!/bin/bash
 
-ncgen -o data/in.nc data/in.cdl
-fin=data/in.nc
+ncgen -o nco-src/data/in.nc nco-src/data/in.cdl
+fin=nco-src/data/in.nc
 
 ncks -H --trd -v one $fin
 

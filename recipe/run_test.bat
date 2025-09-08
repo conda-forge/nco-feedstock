@@ -1,4 +1,4 @@
-cd data
+cd nco-src\data
 
 ncgen -o in.nc in.cdl || exit 1
 
