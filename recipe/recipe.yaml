@@ -1,0 +1,93 @@
+context:
+  version: "5.3.6"
+
+package:
+  name: nco
+  version: ${{ version }}
+
+source:
+  url: https://github.com/nco/nco/archive/${{ version }}.tar.gz
+  sha256: 70d64f461a0d5262274495ee1a9d85735aa3115281fdf01df4f946a919f9f6ae
+
+build:
+  number: 2
+
+requirements:
+  build:
+    - if: win
+      then: cmake
+    - if: unix
+      then:
+        - make
+        - gnuconfig
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler('cxx') }}
+    - if: osx
+      then: llvm-openmp
+    - if: linux
+      then: libgomp
+    - antlr >=2.7.7,<3
+    - if: not win
+      then:
+        - bison
+        - texinfo
+        - flex
+        - m4
+  host:
+    - libblas
+    - libcblas
+    - antlr >=2.7.7,<3
+    - if: not win
+      then:
+        - bison
+        - texinfo
+        - flex
+        - m4
+        - krb5
+    - expat
+    - gsl
+    - if: osx
+      then: llvm-openmp
+    - if: linux
+      then: libgomp
+    - udunits2
+    - zlib
+    # need to list these twice to get version pinning from conda_build_config
+    # and nompi build pinning
+    - hdf5
+    - hdf5 * nompi_*
+    - libnetcdf
+    - libnetcdf * nompi_*
+  run:
+    - if: not win
+      then:
+        - esmf
+        # we don't want older versions of tempest-remap picked with bad dependency constraints
+        - tempest-remap >=2.2.0
+
+tests:
+  - script:
+      - ncks --help
+      - ncap2 --help
+      - ncks -M "http://tds.marine.rutgers.edu/thredds/dodsC/roms/espresso/2013_da/his/ESPRESSO_Real-Time_v2_History_Best"
+    requirements:
+      run:
+        - if: not win
+          then: wget
+    files:
+      source:
+        - data/in.cdl
+
+about:
+  homepage: http://nco.sourceforge.net/
+  license: BSD-3-Clause
+  license_file: COPYING
+  summary: Suite of programs for manipulating NetCDF/HDF4 files
+
+extra:
+  recipe-maintainers:
+    - ocefpaf
+    - kwilcox
+    - xylar
+    - czender
