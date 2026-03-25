@@ -1,0 +1,26 @@
+c_compiler:
+- vs2022
+c_stdlib:
+- vs
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- vs2022
+expat:
+- '2'
+gsl:
+- '2.7'
+hdf5:
+- '2'
+libblas:
+- 3.9.* *netlib
+libcblas:
+- 3.9.* *netlib
+libnetcdf:
+- 4.10.0
+target_platform:
+- win-64
+zlib:
+- '1'
