@@ -5,7 +5,7 @@
 
 [workspace]
 name = "nco-feedstock"
-version = "3.58.0"  # conda-smithy version used to generate this file
+version = "3.58.1"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/nco-feedstock"
 authors = ["@conda-forge/nco"]
 channels = ["conda-forge"]
@@ -23,42 +23,78 @@ description = "List contents of all packages found in rattler-build build direct
 [tasks.build]
 cmd = "rattler-build build --recipe recipe"
 description = "Build nco-feedstock directly (without setup scripts), no particular variant specified"
-[tasks."build-linux_64_"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_.yaml"
-description = "Build nco-feedstock with variant linux_64_ directly (without setup scripts)"
-[tasks."inspect-linux_64_"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_.yaml"
-description = "List contents of nco-feedstock packages built for variant linux_64_"
-[tasks."build-linux_aarch64_"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_.yaml"
-description = "Build nco-feedstock with variant linux_aarch64_ directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_.yaml"
-description = "List contents of nco-feedstock packages built for variant linux_aarch64_"
-[tasks."build-linux_ppc64le_"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_.yaml"
-description = "Build nco-feedstock with variant linux_ppc64le_ directly (without setup scripts)"
-[tasks."inspect-linux_ppc64le_"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_.yaml"
-description = "List contents of nco-feedstock packages built for variant linux_ppc64le_"
-[tasks."build-osx_64_"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_.yaml"
-description = "Build nco-feedstock with variant osx_64_ directly (without setup scripts)"
-[tasks."inspect-osx_64_"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_.yaml"
-description = "List contents of nco-feedstock packages built for variant osx_64_"
-[tasks."build-osx_arm64_"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_.yaml"
-description = "Build nco-feedstock with variant osx_arm64_ directly (without setup scripts)"
-[tasks."inspect-osx_arm64_"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_.yaml"
-description = "List contents of nco-feedstock packages built for variant osx_arm64_"
-[tasks."build-win_64_"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_.yaml"
-description = "Build nco-feedstock with variant win_64_ directly (without setup scripts)"
-[tasks."inspect-win_64_"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_.yaml"
-description = "List contents of nco-feedstock packages built for variant win_64_"
+[tasks."build-linux_64_hdf51.14.6"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf51.14.6.yaml"
+description = "Build nco-feedstock with variant linux_64_hdf51.14.6 directly (without setup scripts)"
+[tasks."inspect-linux_64_hdf51.14.6"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_hdf51.14.6.yaml"
+description = "List contents of nco-feedstock packages built for variant linux_64_hdf51.14.6"
+[tasks."build-linux_64_hdf52"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf52.yaml"
+description = "Build nco-feedstock with variant linux_64_hdf52 directly (without setup scripts)"
+[tasks."inspect-linux_64_hdf52"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_hdf52.yaml"
+description = "List contents of nco-feedstock packages built for variant linux_64_hdf52"
+[tasks."build-linux_aarch64_hdf51.14.6"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6.yaml"
+description = "Build nco-feedstock with variant linux_aarch64_hdf51.14.6 directly (without setup scripts)"
+[tasks."inspect-linux_aarch64_hdf51.14.6"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_hdf51.14.6.yaml"
+description = "List contents of nco-feedstock packages built for variant linux_aarch64_hdf51.14.6"
+[tasks."build-linux_aarch64_hdf52"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf52.yaml"
+description = "Build nco-feedstock with variant linux_aarch64_hdf52 directly (without setup scripts)"
+[tasks."inspect-linux_aarch64_hdf52"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_hdf52.yaml"
+description = "List contents of nco-feedstock packages built for variant linux_aarch64_hdf52"
+[tasks."build-linux_ppc64le_hdf51.14.6"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_hdf51.14.6.yaml"
+description = "Build nco-feedstock with variant linux_ppc64le_hdf51.14.6 directly (without setup scripts)"
+[tasks."inspect-linux_ppc64le_hdf51.14.6"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_hdf51.14.6.yaml"
+description = "List contents of nco-feedstock packages built for variant linux_ppc64le_hdf51.14.6"
+[tasks."build-linux_ppc64le_hdf52"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_hdf52.yaml"
+description = "Build nco-feedstock with variant linux_ppc64le_hdf52 directly (without setup scripts)"
+[tasks."inspect-linux_ppc64le_hdf52"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_hdf52.yaml"
+description = "List contents of nco-feedstock packages built for variant linux_ppc64le_hdf52"
+[tasks."build-osx_64_hdf51.14.6"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf51.14.6.yaml"
+description = "Build nco-feedstock with variant osx_64_hdf51.14.6 directly (without setup scripts)"
+[tasks."inspect-osx_64_hdf51.14.6"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_hdf51.14.6.yaml"
+description = "List contents of nco-feedstock packages built for variant osx_64_hdf51.14.6"
+[tasks."build-osx_64_hdf52"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf52.yaml"
+description = "Build nco-feedstock with variant osx_64_hdf52 directly (without setup scripts)"
+[tasks."inspect-osx_64_hdf52"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_hdf52.yaml"
+description = "List contents of nco-feedstock packages built for variant osx_64_hdf52"
+[tasks."build-osx_arm64_hdf51.14.6"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6.yaml"
+description = "Build nco-feedstock with variant osx_arm64_hdf51.14.6 directly (without setup scripts)"
+[tasks."inspect-osx_arm64_hdf51.14.6"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_hdf51.14.6.yaml"
+description = "List contents of nco-feedstock packages built for variant osx_arm64_hdf51.14.6"
+[tasks."build-osx_arm64_hdf52"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf52.yaml"
+description = "Build nco-feedstock with variant osx_arm64_hdf52 directly (without setup scripts)"
+[tasks."inspect-osx_arm64_hdf52"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_hdf52.yaml"
+description = "List contents of nco-feedstock packages built for variant osx_arm64_hdf52"
+[tasks."build-win_64_hdf51.14.6"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_hdf51.14.6.yaml"
+description = "Build nco-feedstock with variant win_64_hdf51.14.6 directly (without setup scripts)"
+[tasks."inspect-win_64_hdf51.14.6"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_hdf51.14.6.yaml"
+description = "List contents of nco-feedstock packages built for variant win_64_hdf51.14.6"
+[tasks."build-win_64_hdf52"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_hdf52.yaml"
+description = "Build nco-feedstock with variant win_64_hdf52 directly (without setup scripts)"
+[tasks."inspect-win_64_hdf52"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_hdf52.yaml"
+description = "List contents of nco-feedstock packages built for variant win_64_hdf52"
 
 [feature.smithy.dependencies]
 conda-smithy = "*"
