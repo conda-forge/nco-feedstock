@@ -5,7 +5,7 @@
 
 [workspace]
 name = "nco-feedstock"
-version = "2026.8.5"  # conda-smithy version used to generate this file
+version = "2026.9.10"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/nco-feedstock"
 authors = ["@conda-forge/nco"]
 channels = ["conda-forge"]
@@ -38,110 +38,110 @@ description = "List contents of all packages found in rattler-build build direct
 cmd = "rattler-build build --recipe recipe"
 description = "Build nco-feedstock directly (without setup scripts), no particular variant specified"
 [feature.build.tasks."build-linux_64_hdf51.14.6"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf51.14.6.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf51.14.6.yaml --target-platform linux-64"
 description = "Build nco-feedstock with variant linux_64_hdf51.14.6 directly (without setup scripts)"
 [feature.build.tasks."debug-linux_64_hdf51.14.6"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_hdf51.14.6.yaml"
-description = "Build nco-feedstock with variant linux_64_hdf51.14.6 directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_hdf51.14.6.yaml --target-platform linux-64"
+description = "Debug nco-feedstock with variant linux_64_hdf51.14.6 directly (without setup scripts)"
 [feature.build.tasks."inspect-linux_64_hdf51.14.6"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_hdf51.14.6.yaml"
 description = "List contents of nco-feedstock packages built for variant linux_64_hdf51.14.6"
 [feature.build.tasks."build-linux_64_hdf52"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf52.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_hdf52.yaml --target-platform linux-64"
 description = "Build nco-feedstock with variant linux_64_hdf52 directly (without setup scripts)"
 [feature.build.tasks."debug-linux_64_hdf52"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_hdf52.yaml"
-description = "Build nco-feedstock with variant linux_64_hdf52 directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_hdf52.yaml --target-platform linux-64"
+description = "Debug nco-feedstock with variant linux_64_hdf52 directly (without setup scripts)"
 [feature.build.tasks."inspect-linux_64_hdf52"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_hdf52.yaml"
 description = "List contents of nco-feedstock packages built for variant linux_64_hdf52"
 [feature.build.tasks."build-linux_aarch64_hdf51.14.6"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6.yaml --target-platform linux-aarch64"
 description = "Build nco-feedstock with variant linux_aarch64_hdf51.14.6 directly (without setup scripts)"
 [feature.build.tasks."debug-linux_aarch64_hdf51.14.6"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6.yaml"
-description = "Build nco-feedstock with variant linux_aarch64_hdf51.14.6 directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_hdf51.14.6.yaml --target-platform linux-aarch64"
+description = "Debug nco-feedstock with variant linux_aarch64_hdf51.14.6 directly (without setup scripts)"
 [feature.build.tasks."inspect-linux_aarch64_hdf51.14.6"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_hdf51.14.6.yaml"
 description = "List contents of nco-feedstock packages built for variant linux_aarch64_hdf51.14.6"
 [feature.build.tasks."build-linux_aarch64_hdf52"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf52.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_hdf52.yaml --target-platform linux-aarch64"
 description = "Build nco-feedstock with variant linux_aarch64_hdf52 directly (without setup scripts)"
 [feature.build.tasks."debug-linux_aarch64_hdf52"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_hdf52.yaml"
-description = "Build nco-feedstock with variant linux_aarch64_hdf52 directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_hdf52.yaml --target-platform linux-aarch64"
+description = "Debug nco-feedstock with variant linux_aarch64_hdf52 directly (without setup scripts)"
 [feature.build.tasks."inspect-linux_aarch64_hdf52"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_hdf52.yaml"
 description = "List contents of nco-feedstock packages built for variant linux_aarch64_hdf52"
 [feature.build.tasks."build-linux_ppc64le_hdf51.14.6"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_hdf51.14.6.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_hdf51.14.6.yaml --target-platform linux-ppc64le"
 description = "Build nco-feedstock with variant linux_ppc64le_hdf51.14.6 directly (without setup scripts)"
 [feature.build.tasks."debug-linux_ppc64le_hdf51.14.6"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_ppc64le_hdf51.14.6.yaml"
-description = "Build nco-feedstock with variant linux_ppc64le_hdf51.14.6 directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_ppc64le_hdf51.14.6.yaml --target-platform linux-ppc64le"
+description = "Debug nco-feedstock with variant linux_ppc64le_hdf51.14.6 directly (without setup scripts)"
 [feature.build.tasks."inspect-linux_ppc64le_hdf51.14.6"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_hdf51.14.6.yaml"
 description = "List contents of nco-feedstock packages built for variant linux_ppc64le_hdf51.14.6"
 [feature.build.tasks."build-linux_ppc64le_hdf52"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_hdf52.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_hdf52.yaml --target-platform linux-ppc64le"
 description = "Build nco-feedstock with variant linux_ppc64le_hdf52 directly (without setup scripts)"
 [feature.build.tasks."debug-linux_ppc64le_hdf52"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_ppc64le_hdf52.yaml"
-description = "Build nco-feedstock with variant linux_ppc64le_hdf52 directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_ppc64le_hdf52.yaml --target-platform linux-ppc64le"
+description = "Debug nco-feedstock with variant linux_ppc64le_hdf52 directly (without setup scripts)"
 [feature.build.tasks."inspect-linux_ppc64le_hdf52"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_hdf52.yaml"
 description = "List contents of nco-feedstock packages built for variant linux_ppc64le_hdf52"
 [feature.build.tasks."build-osx_64_hdf51.14.6"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf51.14.6.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf51.14.6.yaml --target-platform osx-64"
 description = "Build nco-feedstock with variant osx_64_hdf51.14.6 directly (without setup scripts)"
 [feature.build.tasks."debug-osx_64_hdf51.14.6"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_hdf51.14.6.yaml"
-description = "Build nco-feedstock with variant osx_64_hdf51.14.6 directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_hdf51.14.6.yaml --target-platform osx-64"
+description = "Debug nco-feedstock with variant osx_64_hdf51.14.6 directly (without setup scripts)"
 [feature.build.tasks."inspect-osx_64_hdf51.14.6"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_hdf51.14.6.yaml"
 description = "List contents of nco-feedstock packages built for variant osx_64_hdf51.14.6"
 [feature.build.tasks."build-osx_64_hdf52"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf52.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_hdf52.yaml --target-platform osx-64"
 description = "Build nco-feedstock with variant osx_64_hdf52 directly (without setup scripts)"
 [feature.build.tasks."debug-osx_64_hdf52"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_hdf52.yaml"
-description = "Build nco-feedstock with variant osx_64_hdf52 directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_hdf52.yaml --target-platform osx-64"
+description = "Debug nco-feedstock with variant osx_64_hdf52 directly (without setup scripts)"
 [feature.build.tasks."inspect-osx_64_hdf52"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_hdf52.yaml"
 description = "List contents of nco-feedstock packages built for variant osx_64_hdf52"
 [feature.build.tasks."build-osx_arm64_hdf51.14.6"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6.yaml --target-platform osx-arm64"
 description = "Build nco-feedstock with variant osx_arm64_hdf51.14.6 directly (without setup scripts)"
 [feature.build.tasks."debug-osx_arm64_hdf51.14.6"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6.yaml"
-description = "Build nco-feedstock with variant osx_arm64_hdf51.14.6 directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_hdf51.14.6.yaml --target-platform osx-arm64"
+description = "Debug nco-feedstock with variant osx_arm64_hdf51.14.6 directly (without setup scripts)"
 [feature.build.tasks."inspect-osx_arm64_hdf51.14.6"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_hdf51.14.6.yaml"
 description = "List contents of nco-feedstock packages built for variant osx_arm64_hdf51.14.6"
 [feature.build.tasks."build-osx_arm64_hdf52"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf52.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_hdf52.yaml --target-platform osx-arm64"
 description = "Build nco-feedstock with variant osx_arm64_hdf52 directly (without setup scripts)"
 [feature.build.tasks."debug-osx_arm64_hdf52"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_hdf52.yaml"
-description = "Build nco-feedstock with variant osx_arm64_hdf52 directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_hdf52.yaml --target-platform osx-arm64"
+description = "Debug nco-feedstock with variant osx_arm64_hdf52 directly (without setup scripts)"
 [feature.build.tasks."inspect-osx_arm64_hdf52"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_hdf52.yaml"
 description = "List contents of nco-feedstock packages built for variant osx_arm64_hdf52"
 [feature.build.tasks."build-win_64_hdf51.14.6"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_hdf51.14.6.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_hdf51.14.6.yaml --target-platform win-64"
 description = "Build nco-feedstock with variant win_64_hdf51.14.6 directly (without setup scripts)"
 [feature.build.tasks."debug-win_64_hdf51.14.6"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_64_hdf51.14.6.yaml"
-description = "Build nco-feedstock with variant win_64_hdf51.14.6 directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_64_hdf51.14.6.yaml --target-platform win-64"
+description = "Debug nco-feedstock with variant win_64_hdf51.14.6 directly (without setup scripts)"
 [feature.build.tasks."inspect-win_64_hdf51.14.6"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_hdf51.14.6.yaml"
 description = "List contents of nco-feedstock packages built for variant win_64_hdf51.14.6"
 [feature.build.tasks."build-win_64_hdf52"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_hdf52.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_hdf52.yaml --target-platform win-64"
 description = "Build nco-feedstock with variant win_64_hdf52 directly (without setup scripts)"
 [feature.build.tasks."debug-win_64_hdf52"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_64_hdf52.yaml"
-description = "Build nco-feedstock with variant win_64_hdf52 directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_64_hdf52.yaml --target-platform win-64"
+description = "Debug nco-feedstock with variant win_64_hdf52 directly (without setup scripts)"
 [feature.build.tasks."inspect-win_64_hdf52"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_hdf52.yaml"
 description = "List contents of nco-feedstock packages built for variant win_64_hdf52"
