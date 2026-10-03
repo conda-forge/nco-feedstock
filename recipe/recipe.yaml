@@ -1,5 +1,5 @@
 context:
-  version: "5.4.0"
+  version: "5.4.1"
 
 package:
   name: nco
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/nco/nco/archive/${{ version }}.tar.gz
-  sha256: c6e03cacbde7eae908eabfe65b2c1edc7b1754e07597b8f7fe2fc894f21b2dca
+  sha256: 1908416c4c8c8754f48b797d1030ac847e07d7e49a6d5bf455bdee7808409aad
 
 build:
   number: 0
