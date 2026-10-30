@@ -10,7 +10,7 @@ source:
   sha256: 1908416c4c8c8754f48b797d1030ac847e07d7e49a6d5bf455bdee7808409aad
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -76,6 +76,17 @@ tests:
         - if: not win
           then: wget
     files:
+      source:
+        - data/in.cdl
+  - script:
+      - if: unix
+        then: bash -e run_test.sh
+      - if: win
+        then: call run_test.bat
+    files:
+      recipe:
+        - run_test.sh
+        - run_test.bat
       source:
         - data/in.cdl
 
