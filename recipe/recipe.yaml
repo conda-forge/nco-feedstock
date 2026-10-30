@@ -78,6 +78,17 @@ tests:
     files:
       source:
         - data/in.cdl
+  - script:
+      - if: unix
+        then: bash -e run_test.sh
+      - if: win
+        then: call run_test.bat
+    files:
+      recipe:
+        - run_test.sh
+        - run_test.bat
+      source:
+        - data/in.cdl
 
 about:
   homepage: http://nco.sourceforge.net/
