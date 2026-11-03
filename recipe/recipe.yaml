@@ -1,5 +1,5 @@
 context:
-  version: "5.4.1"
+  version: "5.4.2"
 
 package:
   name: nco
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/nco/nco/archive/${{ version }}.tar.gz
-  sha256: 1908416c4c8c8754f48b797d1030ac847e07d7e49a6d5bf455bdee7808409aad
+  sha256: 082a483ec08a8afe91a645cc2fcabae01c2070ae0cec9218c4ad43760dae4e5c
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -65,6 +65,9 @@ requirements:
         - esmf
         # we don't want older versions of tempest-remap picked with bad dependency constraints
         - tempest-remap >=2.2.0
+    # ncremap calls ps, which minimal Linux images lack
+    - if: linux
+      then: procps-ng
 
 tests:
   - script:
