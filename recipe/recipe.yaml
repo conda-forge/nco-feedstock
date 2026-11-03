@@ -65,6 +65,9 @@ requirements:
         - esmf
         # we don't want older versions of tempest-remap picked with bad dependency constraints
         - tempest-remap >=2.2.0
+    # ncremap calls ps, which minimal Linux images lack
+    - if: linux
+      then: procps-ng
 
 tests:
   - script:
