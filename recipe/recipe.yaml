@@ -8,9 +8,12 @@ package:
 source:
   url: https://github.com/nco/nco/archive/${{ version }}.tar.gz
   sha256: 082a483ec08a8afe91a645cc2fcabae01c2070ae0cec9218c4ad43760dae4e5c
+  patches:
+    # ncremap aborts if ps is missing or exits non-zero; read /proc instead
+    - 0001-ncremap-find-parent-without-ps.patch
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -65,9 +68,6 @@ requirements:
         - esmf
         # we don't want older versions of tempest-remap picked with bad dependency constraints
         - tempest-remap >=2.2.0
-    # ncremap calls ps, which minimal Linux images lack
-    - if: linux
-      then: procps-ng
 
 tests:
   - script:
